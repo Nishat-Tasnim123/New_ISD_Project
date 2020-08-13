@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/cart"
+        android:title="cart"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/cart"
+        />
+    <item
+        android:id="@+id/search"
+        android:title="search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/search"
+        />
+    <item
+        android:title="Main menu"
+        android:icon="@drawable/main"
+        app:showAsAction="always">
+    <menu>
+        <item
+            android:id="@+id/User"
+            android:title="User"
+            app:showAsAction="never"
+            android:icon="@drawable/user"
+            />
+        <item
+            android:id="@+id/CreateAccount"
+            android:title="Create An Account"
+            app:showAsAction="never"
+            android:icon="@drawable/create_account"
+            />
+        <item
+            android:id="@+id/LogOut"
+            android:title="Log Out"
+            app:showAsAction="never"
+            android:icon="@drawable/log_out"
+            />
+        <item
+            android:id="@+id/ContectUs"
+            android:title="Contect Us"
+            app:showAsAction="never"
+            android:icon="@drawable/contact_us"
+            />
+    </menu>
+    </item>
+
+
+</menu>
