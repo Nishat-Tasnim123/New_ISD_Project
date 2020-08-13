@@ -3,6 +3,7 @@ package com.example.doorsteptailors;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,5 +26,10 @@ public class Favourites extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_favourites, container, false);
     }
+
+    /*public void onActivityCreated(Bundle SavedInstanceState) {
+
+        super.onActivityCreated(SavedInstanceState);
+    }*/
 
 }

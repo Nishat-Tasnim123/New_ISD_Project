@@ -26,39 +26,56 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        //for navigation bar
         drawerLayout =findViewById(R.id.drawerID);
         toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.nav_open,R.string.nav_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //for tab bar
+        tablayout = findViewById(R.id.tabLayoutId);
+        viewpager = findViewById(R.id.viewPagerId);
 
-        tablayout = findViewById(R.id.tablayoutID);
-        viewpager = findViewById(R.id.viewpageID);
-
-        viewpager.setAdapter(new MyPagerAdpter(getSupportFragmentManager()));
+        viewpager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         tablayout.setupWithViewPager(viewpager);
+    }
+    class MyPagerAdapter extends FragmentPagerAdapter{
 
-        tablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewpager.setCurrentItem(tab.getPosition());
+        String[] text ={"BestRated","Favourites","Discounted"};
+
+        public MyPagerAdapter(FragmentManager fm)
+        {
+            super(fm);
+        }
+        @Override
+        public Fragment getItem(int i) {
+            if(i == 0)
+            {
+                return new BestRated();
             }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
+            if(i == 1)
+            {
+              return new Favourites();
             }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
+            if (i == 2)
+            {
+                return new Discounts();
             }
-        });
+            return null;
+        }
 
-
-
+        @Override
+        public int getCount() {
+            return text.length;
+        }
+        public CharSequence getPageTitle(int position)
+        {
+            return text[position];
+        }
     }
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -75,40 +92,5 @@ public class MainActivity extends AppCompatActivity {
         menuInflater.inflate(R.menu.right_menu,menu);
         return super.onCreateOptionsMenu(menu);
     }
-    class MyPagerAdpter extends FragmentPagerAdapter{
 
-        String[] text = {"BestRated","Favourites","Discounts"};
-
-        public MyPagerAdpter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int i) {
-
-            if(i == 0)
-            {
-                return new BestRated();
-            }
-            if(i == 1)
-            {
-                return new Favourites();
-            }
-            if(i == 2)
-            {
-                return new Discounts();
-            }
-
-            return null;
-        }
-
-        @Override
-        public int getCount() {
-            return text.length;
-        }
-        public CharSequence getPageTitle(int position)
-        {
-            return text[position];
-        }
-    }
 }
