@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignIn">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                />
+
+            <EditText
+                android:id="@+id/SigninEditTextUsernameId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Enter Your Username"
+
+                android:layout_margin="20dp"/>
+
+            <EditText
+                android:id="@+id/SigninEditTextPasswordId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="Register As:"
+                android:textStyle="bold"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"/>
+            <RadioGroup
+                android:id="@+id/RadioGRPuId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="50dp">
+                <RadioButton
+                    android:id="@+id/uSelectRadioTailorId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="Tailor"
+                    />
+                <RadioButton
+                    android:id="@+id/uSelectRadioCustomerId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="Customer"
+                    />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/signuptxtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="Don't have Account,Signup Now"
+
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"/>
+
+            <View
+                android:layout_marginLeft="49dp"
+                android:layout_marginRight="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/SignInButtonId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:textColor="#ffff"
+                android:text="Sign In"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
