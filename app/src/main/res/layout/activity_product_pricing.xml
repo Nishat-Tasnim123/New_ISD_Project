@@ -43,7 +43,7 @@
             <ListView
                 android:id="@+id/productList"
                 android:layout_width="match_parent"
-                android:layout_height="0sp"></ListView>
+                android:layout_height="0sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -111,6 +111,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
+                        android:onClick="addClickHandler"
                         android:id="@+id/addItem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -130,6 +131,95 @@
                 android:layout_width="match_parent"
                 android:layout_height="1sp"
                 android:background="@color/cardview_shadow_start_color" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/discount_rate"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/discount_rate"
+                        android:layout_width="330sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_marginRight="25sp"
+                        android:layout_marginBottom="5sp"
+                        android:background="@drawable/button_border"
+                        android:hint="@string/enter_discount_rate"
+                        android:maxLines="1"
+                        android:padding="15sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:onClick="increase"
+                    android:id="@+id/up"
+                    android:layout_width="50sp"
+                    android:layout_height="30sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_baseline_arrow_drop_up_24" />
+
+                <ImageButton
+                    android:id="@+id/down"
+                    android:onClick="decrease"
+                    android:layout_width="50sp"
+                    android:layout_height="30sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                    />
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Confirm"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_height="60sp"/>
+
         </LinearLayout>
     </ScrollView>
 

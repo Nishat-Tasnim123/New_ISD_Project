@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5sp"
+    android:paddingLeft="15sp"
+    android:paddingRight="15sp"
+    android:paddingBottom="5sp"
+    >
+
+    <RelativeLayout
+        android:background="@drawable/button_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/editItem"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:background="@null"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"/>
+        <ImageButton
+            android:id="@+id/deleteItem"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_toLeftOf="@+id/editItem"/>
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="80sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15sp"
+            android:text="Data"
+            android:layout_height="50dip"
+            android:layout_toLeftOf="@+id/deleteItem">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15sp"
+            android:text="Data"
+            android:layout_height="50dip"
+            android:layout_toLeftOf="@+id/product_price">
+
+        </TextView>
+
+    </RelativeLayout>
+</LinearLayout>
