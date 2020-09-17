@@ -11,18 +11,24 @@
         android:theme="@style/AppTheme">
         <activity android:name=".tailor_info" />
         <activity android:name=".SignIn">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SignUp" />
         <activity android:name=".Splash_Screen" />
         <activity android:name=".CheckOut" />
         <activity android:name=".Rating" />
         <activity android:name=".TailorOrderDetails" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+
+        <activity android:name=".ProductPricing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
